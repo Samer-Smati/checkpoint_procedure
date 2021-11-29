@@ -1,3 +1,9 @@
+   PROCEDURE dot_product(a:ARRAY_OF INTEGER,b:ARRAY_OF INTEGER,VAR ps:FLOAT)
+    BEGIN
+        FOR i FROM 0 TO a.length-1 STEP 1  DO
+            ps:= ps + a[i]*b[i];
+        END_FOR
+    END
 ALGORITHM scalar_product
     VAR
         V1,V2:ARRAY_OF INTEGER[3]
@@ -20,10 +26,4 @@ ALGORITHM scalar_product
         ELSE
             Write("The dot product of the vectors is orthogonal.")
         END_IF    
-    END
-    PROCEDURE dot_product(a:ARRAY_OF INTEGER,b:ARRAY_OF INTEGER,VAR ps:FLOAT)
-    BEGIN
-        FOR i FROM 0 TO a.length-1 STEP 1  DO
-            ps:= ps + a[i]*b[i];
-        END_FOR
     END
